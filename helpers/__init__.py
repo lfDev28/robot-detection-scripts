@@ -44,3 +44,10 @@ COLOURS = {
         (np.array([100, 50, 50], dtype="uint8"), np.array([140, 255, 255], dtype="uint8"))
     ]
 }
+
+
+def close_screen_capture():
+    # listen for key press
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        cv2.destroyAllWindows()
+        return True
